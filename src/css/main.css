@@ -1,0 +1,51 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("../assets/fonts/Orbitron-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Orbitron Bold";
+  src: url("../assets/fonts/Orbitron-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  image-rendering: optimizeSpeed; /* Older versions of FF */
+  image-rendering: -moz-crisp-edges; /* FF 6.0 + */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non standard naming) */
+  image-rendering: -o-crisp-edges; /* OSX & Windows Opera */
+  image-rendering: crisp-edges; /* Possible future browser */
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non standard naming) */
+  image-rendering: pixelated; /* Chrome 41 */
+  background-color: #333;
+}
+
+canvas {
+  margin: 0 auto;
+  display: block;
+}
+
+#game { font-family: "Orbitron", sans-serif; position: relative; }
+
+#game > :first-child {
+  left: 50%;
+  transform: scale(1, 1) translateX(-50%) !important;
+}
